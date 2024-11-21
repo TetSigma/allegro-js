@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import endpoints from "./endpoints";
 
 class AllegroClient{
     constructor(clientId, clientSecret){
@@ -51,6 +51,14 @@ class AllegroClient{
             console.error('API Request Failed:', error.response?.data || error.message);
             throw error;
         }
+    }
+
+    async getUser (){
+        return this.request('GET', endpoints.getUser());
+    }
+
+    async getOffers(){
+        return this.request('GET', endpoints.getOffers());
     }
 
 }
