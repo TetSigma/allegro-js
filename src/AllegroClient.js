@@ -61,6 +61,20 @@ class AllegroClient{
         return this.request('GET', endpoints.getOffers());
     }
 
+    async getOfferById(offerId){
+        return this.request('GET', endpoints.getOfferById(offerId));
+    }
+
+    async getSmartOfferById(offerId){
+        return this.request('GET', endpoints.getSmartOfferById(offerId));
+    }
+
+    async getOfferEvents(){
+        return this.request('GET', endpoints.getOfferEvents());
+    }
+
+    
+
 }
 
 
