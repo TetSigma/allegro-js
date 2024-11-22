@@ -72,9 +72,7 @@ class AllegroClient{
     async getOfferEvents(){
         return this.request('GET', endpoints.getOfferEvents());
     }
-
     
-
 }
 
 

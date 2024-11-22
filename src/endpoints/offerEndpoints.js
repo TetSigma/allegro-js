@@ -8,3 +8,4 @@ export const getOfferById = (offerId) => `${API_BASE_URL}/sale/product-offers/${
 export const getSmartOfferById = (offerId) => `${API_BASE_URL}/sale/offers/${offerId}/smart`
 
 export const getOfferEvents = () => `${API_BASE_URL}/sale/offer-events`
+
