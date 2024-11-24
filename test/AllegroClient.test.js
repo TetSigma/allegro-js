@@ -34,13 +34,15 @@ describe('AllegroClient', () => {
     });
 
     test('should make a GET request to get user', async () => {
-        const mockUser Response = { id: 'user123', name: 'Test User' }; 
+        const mockUser  = { id: 'user123', name: 'Test User' }; 
+        const response = { data: mockUser  }; 
+    
         axios.create.mockReturnValue({
-            request: jest.fn().mockResolvedValue({ data: mockUser Response })
+            request: jest.fn().mockResolvedValue(response) 
         });
-
+    
         const user = await client.getUser ();
-        expect(user).toEqual(mockUser Response); 
+        expect(user).toEqual(mockUser );
         expect(axios.create().request).toHaveBeenCalledWith({
             method: 'GET',
             url: expect.stringContaining('/sale/users/me'),
