@@ -1,6 +1,6 @@
-import AuthService from './services/AuthService';
-import ApiService from './services/ApiService';
-import endpoints from './endpoints';
+import AuthService from './services/AuthService.js';
+import ApiService from './services/ApiService.js';
+import endpoints from './endpoints/index.js'
 
 class AllegroClient {
     constructor(clientId, clientSecret) {

@@ -14,7 +14,7 @@ class ApiService {
     async request(method, url, data = null, params = null) {
         const token = await this.authService.authenticate();
         this.httpClient.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
+        console.log(token)
         try {
             const response = await this.httpClient.request({ method, url, data, params });
             return response.data;
